@@ -1,5 +1,5 @@
 let display = 0;
-let num1 = 0;
+let num1 = "";
 let operator = 0;
 let a = 0;
 
@@ -50,6 +50,7 @@ let input = document.querySelectorAll("button.number");
 let arrInput = Array.from(input);
 arrInput.forEach((div, index) => div.addEventListener("click", ()=> {
     num1 += arrInput[index].id;
+    displaybutton.innerHTML = num1;
 }));
 
 let division = document.querySelector("#divide");
@@ -60,34 +61,38 @@ let equals = document.querySelector("#equals");
 let clear = document.querySelector("#clear");
 let percent = document.querySelector("#percent");
 let plusminus = document.querySelector("#plusminus");
-let dot = document.querySelector("dot");
+let dot = document.querySelector("#dot");
 let displaybutton = document.querySelector("#display");
 
 division.addEventListener("click", () => {
     operator = "/";
     a = num1;
     num1 = "";
+    displaybutton.innerHTML = "/";
 })
 multiplication.addEventListener("click", () => {
     operator = "*";
     a = num1;
     num1 = "";
+    displaybutton.innerHTML = "*";
 })
 addition.addEventListener("click", () => {
     operator = "+";
     a = num1;
     num1 = "";
+    displaybutton.innerHTML = "+";
 })
 subtraction.addEventListener("click", () => {
     operator = "-";
     a = num1;
     num1 = "";
+    displaybutton.innerHTML = "-";
 })
 equals.addEventListener("click", () => {
     display = operate(operator, Number(a), Number(num1));
     a = "";
     num1 = display;
-    displaybutton.innerHTML = display;  
+    displaybutton.innerHTML = "Ans: " + Number(display).toFixed(2);  
 })
 clear.addEventListener("click", () => {
     display = 0;
@@ -107,4 +112,5 @@ plusminus.addEventListener("click", () => {
 })
 dot.addEventListener("click", () => {
     num1 += ".";
+    displaybutton.innerHTML = num1;
 })
