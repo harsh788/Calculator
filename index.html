@@ -5,41 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
 </head>
 <body>
     <div id="calculator">
         <div id="row1">
-            <div id="display">1234567890</div>
+            <div id="display">0</div>
         </div>
+        <hr>
         <div id="row2">
             <button id="clear">C</button>
             <button id="percent">%</button>
             <button id="plusminus">+/-</button>
-            <button id="equals">=</button>
-        </div>
-        <div id="row3">
-            <button id="seven">7</button>
-            <button id="eigth">8</button>
-            <button id="nine">9</button>
             <button id="divide">/</button>
         </div>
-        <div id="row4">
-            <button id="four">4</button>
-            <button id="five">5</button>
-            <button id="six">6</button>
+        <hr>
+        <div id="row3">
+            <button class="number" id="7">7</button>
+            <button class="number" id="8">8</button>
+            <button class="number" id="9">9</button>
             <button id="multiply">x</button>
         </div>
-        <div id="row5">
-            <button id="one">1</button>
-            <button id="two">2</button>
-            <button id="three">3</button>
-            <button id="add">-</button>
+        <hr>
+        <div id="row4">
+            <button class="number" id="4">4</button>
+            <button class="number" id="5">5</button>
+            <button class="number" id="6">6</button>
+            <button id="subtract">-</button>
         </div>
-        <div id="row6">
-            <button id="zero">0</button>
-            <button id="dot">.</button>
+        <hr>
+        <div id="row5">
+            <button class="number" id="1">1</button>
+            <button class="number" id="2">2</button>
+            <button class="number" id="3">3</button>
             <button id="add">+</button>
+        </div>
+        <hr>
+        <div id="row6">
+            <button class="number" id="zero">0</button>
+            <button id="dot">.</button>
+            <button id="equals">=</button>
         </div>
     </div>
 </body>
